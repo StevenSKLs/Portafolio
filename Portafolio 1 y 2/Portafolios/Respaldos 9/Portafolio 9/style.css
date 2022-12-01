@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,700;1,400&family=Rubik:wght@300&display=swap');
+
+:root{
+    --black: black;
+    --gray: gray;
+    --white: white; 
+    --cafe: #2c2323;
+    --heigth:10px;
+    --color:rgb(245, 240, 240);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* escritorio  y mobile
+titulo de 150px y 40px 
+    subtitulo 50px y 25px
+    subseccion 45 y 18px
+    body 18px y 16px
+*/
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* esto es e body con importancia */
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    padding: 3rem 1rem 1rem;
+    background-color: black;
+    
+}
+
+.header-content{
+    background-color: var(--black);
+   
+}
+
+/* menu */
+
+
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    height: 80px;
+    box-shadow: 10px 5px 10px 5px #ccc;
+}
+*/
+
+nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.nav-menu{
+    background-color: rgb(19, 18, 18);
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: -100%;
+    height: calc( 85vh - 80px );
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: left .5s cubic-bezier(0.63, -0.15, 0.44, 1.28);
+    color: rgba(255, 255, 255, 0.856);
+    z-index: 1;
+    background-image: url(./Imágenes/fantasma.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: color-burn;
+}
+.nav-menu a{
+    color: white;
+}
+
+.nav-item{
+    list-style: none;
+    font-size: 1.25rem;
+    border-width: 1px;
+}
+
+#btn-menu:checked ~ .nav-menu{
+    left: 0;
+  
+}
+
+/* fin */
+
+
+
+.header-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    
+}
+/* .header-image{
+    position: relative;
+    padding: 1rem 1rem 0;
+    margin-bottom: 2rem;
+} 
+.header-image img{
+
+} */
+
+.header-image{
+    width: 170px;
+    height: 170px;
+    background-image: url(./Imágenes/Persona.png);
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+    background-size: contain;
+    background-color: #544e45;
+    border-radius: 40% 40% 40% 40%;
+    border: 2px solid #b3aaaa;
+}
+
+.header-information h1{
+    font-size: revert;
+    color: var(--gray)
+}
+
+.header-information h2{
+    font-size: 2.8rem;
+    color: var(--white);
+}
+
+.social-container{
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    justify-content: center;
+}
+.header-contact{
+    color: var(--white);
+    width: 90%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1rem 1.5rem;
+    text-align: -webkit-center;
+}
+
+.header-contact h3{
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+
+.header-contact p{
+    color: var(--gray);
+    line-height: 1.5rem;
+    font-size: 1.06rem;
+}
+
+.habilite-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 1.5rem 1rem;
+    position: relative;
+    margin-top: 30px;
+}
+
+.habilite-information h4{
+    padding: 0.8rem;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.habilite-section{
+    gap: 1.5rem;
+    padding: 0.5rem;
+    display: contents;
+}
+.habilite-section p{
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.habilite-circle{
+    background-color: var(--cafe);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.experience-information{
+    text-align: center;
+    padding: 1rem 1.5rem 1rem;
+    position: relative;
+}
+
+.experience-information h5{
+    padding: 0.9rem;
+    color: white;
+    font-size: 1.7rem;
+}
+.experience-information hr{
+    border-color: var(--cafe);
+}
+
+.experience-all{
+    gap: 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    
+}
+
+.experience-all p{
+    text-align: start;
+    color: var(--gray);
+    margin-top: 0.2rem;
+}
+.experience-all span{
+    font-size: 1rem;
+    color: white;
+    font-weight: 1000;
+}
+
+.portafolio-section{
+    padding: 3rem 2.1% 2.5rem;
+    position: relative;
+}
+.portafolio-section h6{
+    padding: 0.9rem;
+    color: white;
+    font-size: 1.7rem;
+}
+.portafolio-items{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.portafolio-items article{
+    padding: 1rem 1rem 2rem;
+}
+
+.portafolio-items article > img{
+    height: 310px;
+}
+
+.iconos:hover{
+    transform: rotateY(200deg) rotateY(150deg);
+    transition: 2s ease-in-out ;
+}
+
+
+
+.contact-section{
+    padding: 1rem;
+    position: relative;
+}
+
+.contact-section h6{
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.7rem;
+}
+
+
+.contact-conteiner{
+    display: grid;
+    padding: 1rem;
+    text-align-last: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+   
+}
+
+.contact-circle{
+    color: var(--cafe);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.contact-conteiner p{
+    text-align: start;
+    color: var(--gray);
+    margin-top: 0.2rem;
+}
+.contact-conteiner span{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.589);
+    font-weight: 1000;
+}
+
+
+/* XPRAXPNCITO*/
+
+
+.heart{
+    height: var(--heigth);
+    width: var(--heigth);
+    background-color: var(--color);
+    transform: rotate(45deg);
+    animation: latir .5s infinite ease-in-out alternate;
+}
+.heart::before, .heart::after{
+    content: "";
+    height: var(--heigth);
+    width: var(--heigth);
+    background-color: var(--color);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(-7px);
+}
+.heart::after{
+    transform: translateX(-7px);
+}
+
+@keyframes latir{
+    100%{
+        transform:rotate(45deg) scale(1.2);
+    }
+}
+
+
+.final-corazon{
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.808);
+    padding: 1rem;
+}
+
+.imagenes{
+    position: absolute;
+    left: -6%;
+    top: -37px;
+}
+.imagen2{
+    position: absolute;
+    right: -8%;
+    top: -37px;
+}
+
+
+
+
+
+
+
+
+
+/* RESPONSI */
+
+
+@media screen and ( min-width: 779px ){
+    body{
+        padding: 5rem 1rem 1rem;
+    }
+
+    label{
+        display: none;
+    }
+
+    .nav-menu{
+        position: static;
+        min-height: auto;
+        flex-direction: row;
+        height: 80p;
+        max-height: 80px;
+        justify-content: flex-end;
+        background-color: transparent;
+        gap: 2rem;
+        background-image: none;
+        color: white;
+    }
+
+    .nav-item{
+        font-size: 1rem;
+        padding: 0 13px 0 0;
+        border-style: none ;
+    }   
+    .habilite-section {
+        gap: 0.5rem 6rem;
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .experience-information {
+        padding: 1rem 19% 1rem;
+    }
+    .experience-all p {
+        padding: 0px 22% 0px 0px;
+    }
+    .fecha{
+        align-self: flex-end;
+    }
+    .experience-all{
+        display: flex;
+        flex-direction: row;
+    }
+    .social-container{
+        gap: 45%;
+    }
+    .portafolio-section {
+        padding: 2rem 2.1% 1.5rem;
+    }
+    .portafolio-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0rem 7rem 0rem;
+    }
+    .portafolio-section h6 {
+        text-align: center;
+    }
+    .portafolio-items article > img {
+        height: 176px;
+    }
+    .contact-section {
+        padding: 1rem 30%;
+        text-align: center;
+    }
+    .imagenes{
+        left: -8%;
+        z-index: -1;
+        top: 91px;
+    }
+    .imagenes img{
+        width: 200px;
+        height: 200px;
+    }
+    .imagen2{
+        position: absolute;
+        right: -4%;
+        top: 100px;
+    }
+    .imagen2 img{
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+
